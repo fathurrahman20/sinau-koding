@@ -1,0 +1,60 @@
+body {
+  background: #cdd0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 10px;
+  border: 4px solid #999;
+  border-radius: 4px;
+  width: 260px;
+}
+
+.display {
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border-bottom: 4px solid #1e1e1e;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 8px;
+}
+
+button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.red {
+  background: #a33;
+  grid-column: span 2;
+}
+
+.blue {
+  background: #024;
+  grid-row: span 2;
+}
+
+.zero {
+  grid-column: span 2;
+}
