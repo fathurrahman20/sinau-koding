@@ -24,3 +24,8 @@ Aplikasi ini merupakan kalkulator berbasis web, dibuat menggunakan **HTML, CSS, 
 
 </details>
 </summary>
+
+## 🌐 Demo
+
+Aplikasi sudah dideploy dan dapat diakses di:
+👉 **[calc.ffathur.my.id](https://calc.ffathur.my.id)**
