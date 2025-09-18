@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: space-grotesk;
+  src: url("@/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+@theme {
+  --color-primary: #b9ff66;
+  --color-secondary: #191a23;
+  --color-tertiary: #f3f3f3;
+  --shadow-bottom: 0px 8px 0px 0px rgba(0, 0, 0, 0.78);
+}
+
+:root {
+  font-family: space-grotesk, Inter, Optimus Princeps, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
