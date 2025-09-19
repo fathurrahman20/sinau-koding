@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+# Positivus Landing Page Slicing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![alt text](public/preview.png)
 
-Currently, two official plugins are available:
+Proyek ini adalah implementasi _front-end_ (slicing) dari desain **Positivus Landing Page** yang tersedia di Figma. Dibuat dengan tujuan untuk menerjemahkan desain UI/UX menjadi kode yang fungsional dan terstruktur menggunakan teknologi web modern.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Link Penting:**
 
-## Expanding the ESLint configuration
+- **Live Demo:** [**positivus-v1.vercel.app**](https://positivus.vercel.app/)
+- **Desain Figma:** [**Positivus Landing Page Design**](https://www.figma.com/design/g7m48KXSguW0UE6ewPY9Gr/Positivus-Landing-Page-Design--Community-?node-id=330-762)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Fitur yang Sudah Diimplementasikan
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Header & Navigation Bar**,
+- **Hero Section**,
+- **Clients/Partners Logo**,
+- **Services Section**,
+- **Banner Section**,
+- **Case Studies Section**,
+- **Working Process Section**,
+- **Teams Section**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Proyek ini dibangun menggunakan _stack_ teknologi modern yang fokus pada _developer experience_ dan performa.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Framework:** [**React**](https://react.dev/)
+- **Language:** [**TypeScript**](https://www.typescriptlang.org/)
+- **Styling:** [**Tailwind CSS**](https://tailwindcss.com/)
+- **Build Tool:** [**Vite**](https://vitejs.dev/)
+- **Deployment:** [**Vercel**](https://vercel.com/)
+
+---
+
+## 📝 Status & Rencana Pengembangan
+
+Proyek ini masih dalam tahap pengembangan. Berikut adalah daftar tugas yang perlu diselesaikan:
+
+### To-Do List
+
+- [ ] **Slicing Section Testimonial:** Mengimplementasikan komponen untuk menampilkan testimoni klien.
+- [ ] **Slicing Section Contact Us:** Membuat formulir kontak dan informasi relevan.
+- [ ] **Slicing Footer:** Membangun bagian _footer_ sesuai desain.
+- [ ] **Implementasi Responsivitas:** Menyesuaikan _layout_ agar tampil baik di berbagai ukuran layar (mobile, tablet, desktop).
+- [ ] **Refactoring & Code Cleanup:** Merapikan kode dan memastikan struktur komponen sudah optimal.
+- [ ] **Menambahkan Interaktivitas:** Memberi efek transisi atau animasi sederhana untuk meningkatkan _user experience_.
+
+### Status Saat Ini
+
+- **Responsiveness:** Belum sepenuhnya responsif. Tampilan saat ini dioptimalkan untuk desktop.
+- **Kelengkapan Halaman:** Sekitar 70% dari total desain halaman utama telah selesai di-slicing.
+
+---
+
+Terima kasih telah mengunjungi repository ini!
