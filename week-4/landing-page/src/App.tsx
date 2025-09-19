@@ -4,6 +4,7 @@ import Company from "./components/company";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import Services from "./components/services";
+import Teams from "./components/teams";
 import WorkingProcess from "./components/working-process";
 import "./index.css";
 
@@ -17,6 +18,7 @@ function App() {
       <Banner />
       <CaseStudies />
       <WorkingProcess />
+      <Teams />
     </>
   );
 }

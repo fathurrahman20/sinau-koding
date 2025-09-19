@@ -1,15 +1,15 @@
-import React, { type ReactNode } from "react";
+import React from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { LuPlus } from "react-icons/lu";
 import { FiMinus } from "react-icons/fi";
 
-interface AccordionCardProps {
+export interface AccordionCardProps {
   number: string;
   title: string;
-  children: ReactNode;
+  content: string;
 }
-const AccordionCard = ({ number, title, children }: AccordionCardProps) => {
+const AccordionCard = ({ number, title, content }: AccordionCardProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleAccordion = () => {
@@ -21,7 +21,7 @@ const AccordionCard = ({ number, title, children }: AccordionCardProps) => {
       className={`md:max-w-[1234px] w-full bg-tertiary rounded-[45px] border-[1px] mb-4 overflow-hidden shadow-bottom my-[30px]`}>
       {/* button */}
       <button
-        className={`flex items-center justify-between text-neutral-200 w-full p-4 text-left ${
+        className={`flex items-center justify-between text-neutral-200 w-full p-4 text-left hover:cursor-pointer ${
           isOpen ? "bg-primary" : ""
         }`}
         onClick={toggleAccordion}>
@@ -65,7 +65,7 @@ const AccordionCard = ({ number, title, children }: AccordionCardProps) => {
             <div className={`p-4 ${isOpen ? "bg-primary" : "bg-tertiary"}`}>
               <div className="flex items-center flex-col space-y-3">
                 <p className="text-[18px] text-black font-light p-4">
-                  {children}
+                  {content}
                 </p>
               </div>
             </div>

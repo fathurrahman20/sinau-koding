@@ -9,7 +9,7 @@
   --color-primary: #b9ff66;
   --color-secondary: #191a23;
   --color-tertiary: #f3f3f3;
-  --shadow-bottom: 0px 8px 0px 0px rgba(0, 0, 0, 0.78);
+  --shadow-bottom: 0px 5px 0px 0px rgba(0, 0, 0, 0.78);
 }
 
 :root {
