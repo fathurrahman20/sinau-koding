@@ -6,7 +6,7 @@ Proyek ini adalah implementasi _front-end_ (slicing) dari desain **Positivus Lan
 
 **Link Penting:**
 
-- **Live Demo:** [**positivus-v1.vercel.app**](https://positivus.vercel.app/)
+- **Live Demo:** [**positivus-v1.vercel.app**](https://positivus-v1.vercel.app/)
 - **Desain Figma:** [**Positivus Landing Page Design**](https://www.figma.com/design/g7m48KXSguW0UE6ewPY9Gr/Positivus-Landing-Page-Design--Community-?node-id=330-762)
 
 ---
