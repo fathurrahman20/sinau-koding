@@ -31,7 +31,6 @@ export const LeftPanel = ({ data }: LeftPanelProps) => {
             <span>{data.contact.phone}</span>
           </li>
           <li className="flex items-center gap-3">
-            {/* Pastikan baris ini ada dan ikonnya memiliki ukuran yang sama */}
             <FiMail className="w-5 h-5 flex-shrink-0" />
             <span>{data.contact.email}</span>
           </li>

@@ -40,7 +40,7 @@ export const cvData: CVData = {
   experience: {
     role: "Frontend Intern",
     company: "PT Widya Informasi Nusantara",
-    tech: ["React", "Next.js", "Tailwind"],
+    tech: ["Tailwind", "TypeScript", "React", "Next.js"],
   },
   skills: [
     "HTML",
