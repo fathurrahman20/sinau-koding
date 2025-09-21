@@ -27,19 +27,19 @@ export const LeftPanel = ({ data }: LeftPanelProps) => {
         </h3>
         <ul className="space-y-3">
           <li className="flex items-center gap-3">
-            <FiPhone className="w-5 h-5 flex-shrink-0" />
+            <FiPhone className="w-4 h-4 flex-shrink-0" />
             <span>{data.contact.phone}</span>
           </li>
           <li className="flex items-center gap-3">
-            <FiMail className="w-5 h-5 flex-shrink-0" />
+            <FiMail className="w-4 h-4 flex-shrink-0" />
             <span>{data.contact.email}</span>
           </li>
           <li className="flex items-center gap-3">
-            <FiMapPin className="w-5 h-5 flex-shrink-0" />
+            <FiMapPin className="w-4 h-4 flex-shrink-0" />
             <span>{data.contact.location}</span>
           </li>
           <li className="flex items-center gap-3">
-            <FiGithub className="w-5 h-5 flex-shrink-0" />
+            <FiGithub className="w-4 h-4 flex-shrink-0" />
             <span>{data.contact.github}</span>
           </li>
         </ul>
