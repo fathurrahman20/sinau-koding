@@ -11,7 +11,7 @@ export default function Error({ message }: { message: string }) {
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{message}</AlertDescription>
       </Alert>
-      <Button onClick={() => navigate(-1)}>
+      <Button onClick={() => navigate(-1)} className="cursor-pointer">
         <ArrowLeft className="mr-2 h-4 w-4 text-lg" /> Kembali
       </Button>
     </div>

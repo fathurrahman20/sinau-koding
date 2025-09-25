@@ -5,6 +5,7 @@ import Pagination from "@/components/pokemon-list-page/pagination";
 import { usePokemonData } from "@/hooks/usePokemonData";
 import { useMemo } from "react";
 import { useSearchParams } from "react-router";
+import { motion, type Variants } from "framer-motion";
 
 export default function PokemonListPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -23,6 +24,28 @@ export default function PokemonListPage() {
     window.scrollTo(0, 0); // Scroll ke atas halaman
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+
   if (isLoading) {
     return <Loading />;
   }
@@ -33,15 +56,27 @@ export default function PokemonListPage() {
 
   return (
     <main className="container mx-auto p-4 md:p-8">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center tracking-wide">
-        Pokemen
-      </h1>
+      <motion.h1
+        className="text-3xl md:text-4xl font-bold mb-8 text-center tracking-wide"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}>
+        Pokémon
+      </motion.h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible">
         {data?.results?.map((pokemon) => (
-          <CardPokemon key={pokemon.name} name={pokemon.name} />
+          <CardPokemon
+            key={pokemon.name}
+            name={pokemon.name}
+            variants={itemVariants}
+          />
         ))}
-      </div>
+      </motion.div>
 
       <Pagination
         currentPage={currentPage}

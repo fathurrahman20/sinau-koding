@@ -5,12 +5,16 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Skeleton } from "../ui/skeleton";
 import { Badge } from "../ui/badge";
+import { motion, type Variants } from "framer-motion";
 
 interface CardPokemonProps {
   name: string;
+  variants: Variants;
 }
 
-export default function CardPokemon({ name }: CardPokemonProps) {
+const MotionLink = motion(Link);
+
+export default function CardPokemon({ name, variants }: CardPokemonProps) {
   const [pokemon, setPokemon] = useState<Pokemon | undefined>();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -40,10 +44,14 @@ export default function CardPokemon({ name }: CardPokemonProps) {
   }
 
   return (
-    <Link
+    <MotionLink
       to={`/pokemon/${name}`}
-      className="outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg">
-      <Card className="hover:border-primary/80 hover:shadow-lg transition-all duration-300 group">
+      className="outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+      variants={variants}
+      whileHover={{ y: -8, scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300 }}>
+      <Card className="hover:border-primary/80 hover:shadow-lg transition-colors duration-300 group h-full">
         <CardHeader className="p-0 flex items-center justify-center">
           <div className="aspect-square w-full p-4 bg-muted/50 rounded-t-lg">
             <img
@@ -58,24 +66,24 @@ export default function CardPokemon({ name }: CardPokemonProps) {
             <p className="text-lg font-semibold text-muted-foreground">
               {formatPokemonId(pokemon.id)}
             </p>
-            <p className="text-lg">EXP: {pokemon.base_experience}</p>
           </div>
           <h3 className="text-2xl font-bold capitalize truncate">
             {pokemon.name}
           </h3>
-          <div className="flex gap-2 mt-2">
+          <div className="flex flex-wrap gap-1 mt-2">
             {pokemon.types.map(({ type }) => (
               <Badge
                 key={type.name}
                 className={`${
-                  typeColors[type.name] || "bg-gray-500"
-                } text-white border-none capitalize p-2 rounded-2xl tracking-wide text-lg`}>
+                  typeColors[type.name as keyof typeof typeColors] ||
+                  "bg-gray-500"
+                } text-white border-none capitalize`}>
                 {type.name}
               </Badge>
             ))}
           </div>
         </CardContent>
       </Card>
-    </Link>
+    </MotionLink>
   );
 }
