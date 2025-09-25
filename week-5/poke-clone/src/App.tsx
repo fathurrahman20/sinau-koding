@@ -1,7 +1,11 @@
-import HomePage from "./pages/home-page";
+import Routers from "./routes/router";
 
 function App() {
-  return <HomePage />;
+  return (
+    <>
+      <Routers />
+    </>
+  );
 }
 
 export default App;
