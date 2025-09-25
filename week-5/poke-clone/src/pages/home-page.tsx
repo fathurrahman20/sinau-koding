@@ -1,13 +1,13 @@
 import CardPokemon from "@/components/card-pokemon";
-import type { Root } from "@/types/index.types";
 import { getAllPokemon } from "@/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type Key } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react";
+import type { NamedAPIResourceList } from "pokenode-ts";
 
 export default function HomePage() {
-  const [data, setData] = useState<Root>();
+  const [data, setData] = useState<NamedAPIResourceList>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -18,6 +18,7 @@ export default function HomePage() {
       try {
         const data = await getAllPokemon();
         setData(data);
+        console.log(data);
       } catch (err) {
         if (err instanceof Error) {
           setError(err.message);
@@ -35,9 +36,11 @@ export default function HomePage() {
   if (isLoading) {
     return (
       <main className="container mx-auto p-4 md:p-8">
-        <h1 className="text-3xl md:text-4xl font-bold mb-6">Memuat Pokemon</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          Memuat Pokemon
+        </h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {Array.from({ length: 10 }).map((_, index) => (
+          {Array.from({ length: 10 }).map((_: unknown, index: Key) => (
             <Skeleton key={index} className="h-48 w-full rounded-lg" />
           ))}
         </div>
