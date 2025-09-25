@@ -3,8 +3,8 @@ import { formatPokemonId, getPokemonByName, typeColors } from "@/utils";
 import type { Pokemon } from "pokenode-ts";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { Skeleton } from "./ui/skeleton";
-import { Badge } from "./ui/badge";
+import { Skeleton } from "../ui/skeleton";
+import { Badge } from "../ui/badge";
 
 interface CardPokemonProps {
   name: string;
