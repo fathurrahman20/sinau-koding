@@ -1,3 +1,4 @@
+import Layout from "@/components/layout";
 import DetailStatistic from "@/components/pokemon-detail-page/detail-statistic";
 import DetailType from "@/components/pokemon-detail-page/detail-type";
 import Error from "@/components/pokemon-detail-page/error";
@@ -61,28 +62,29 @@ export default function PokemonDetailPage() {
   }
 
   return (
-    <motion.div
-      className="container mx-auto max-w-4xl p-4"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible">
-      <motion.div variants={itemVariants}>
-        <Button
-          variant="outline"
-          onClick={() => navigate(-1)}
-          className="mb-6 cursor-pointer">
-          <ArrowLeft className="mr-2 h-4 w-4 text-lg" /> Kembali ke Daftar
-        </Button>
+    <Layout>
+      <motion.div
+        className="container mx-auto max-w-4xl p-4"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible">
+        <motion.div variants={itemVariants}>
+          <Button
+            variant="outline"
+            onClick={() => navigate(-1)}
+            className="mb-6 cursor-pointer">
+            <ArrowLeft className="mr-2 h-4 w-4 text-lg" /> Kembali ke Daftar
+          </Button>
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <Card>
+            <div className="grid md:grid-cols-2 gap-6 p-6">
+              <DetailType pokemon={pokemon} />
+              <DetailStatistic pokemon={pokemon} />
+            </div>
+          </Card>
+        </motion.div>
       </motion.div>
-
-      <motion.div variants={itemVariants}>
-        <Card>
-          <div className="grid md:grid-cols-2 gap-6 p-6">
-            <DetailType pokemon={pokemon} />
-            <DetailStatistic pokemon={pokemon} />
-          </div>
-        </Card>
-      </motion.div>
-    </motion.div>
+    </Layout>
   );
 }
