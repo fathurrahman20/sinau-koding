@@ -6,8 +6,8 @@ export const client = new PokemonClient({
 });
 
 export const getAllPokemon = async (
-  offset?: number | undefined,
-  limit?: number | undefined
+  limit?: number | undefined,
+  offset?: number | undefined
 ) => {
   const pokemons = await client.listPokemons(offset, limit);
   return pokemons;
