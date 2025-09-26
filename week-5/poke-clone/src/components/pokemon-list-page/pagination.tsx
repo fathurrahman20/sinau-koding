@@ -44,7 +44,7 @@ export default function Pagination({
           <PaginationItem className="mx-2 md:mx-3">
             <PaginationLink
               isActive
-              className="px-4 md:px-16 text-lg md:text-xl">
+              className="px-14 md:px-16 text-lg md:text-xl">
               Page {currentPage} of {totalPages}
             </PaginationLink>
           </PaginationItem>

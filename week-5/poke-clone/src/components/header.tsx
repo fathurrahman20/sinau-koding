@@ -16,7 +16,7 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Pokemon List", href: "/pokemon" },
+    { name: "Pokemon", href: "/pokemon" },
   ];
 
   return (

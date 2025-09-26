@@ -30,12 +30,12 @@ export default function HomePage() {
         />
 
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4">
-          Selamat Datang, Pelatih!
+          Saatnya Berburu Pokemon!
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
-          Jelajahi dunia Pokemon yang luas, temukan ratusan spesies unik, dan
-          bangun tim impianmu.
+          Ayo cek daftar Pokemon, pelajari detail kekuatan mereka, dan
+          rencanakan strategi terbaik.
         </p>
 
         <motion.div
