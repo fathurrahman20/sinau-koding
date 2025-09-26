@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Pokemen Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selamat datang di Pokemen Web App! Ini adalah aplikasi web yang menampilkan informasi mengenai semua Pokemon yang ada dalam PokeAPI.
 
-Currently, two official plugins are available:
+[![Demo](public/image.png)](https://pokemens.ffathur.my.id)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Fitur Utama
 
-## React Compiler
+- **Daftar Pokemon**: Menampilkan daftar seluruh Pokemon dengan sistem paginasi yang mudah digunakan.
+- **Halaman Detail**: Halaman detail yang kaya informasi untuk setiap Pokemon, termasuk statistik, tipe, kemampuan, tinggi, dan berat.
+- **Desain Responsif**: Tampilan yang optimal di berbagai perangkat, mulai dari desktop hingga mobile.
+- **Mode Gelap & Terang**: Terdapat toggle untuk mengubah tema sesuai preferensi pengguna.
+- **Animasi**: Dibangun dengan Framer Motion untuk memberikan transisi dan pengalaman pengguna yang lebih hidup.
+- **Antarmuka Modern**: UI yang bersih dan modern dirancang menggunakan Tailwind CSS dan shadcn/ui.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Teknologi yang Digunakan
 
-## Expanding the ESLint configuration
+- **Frontend**: React & TypeScript
+- **Routing**: React Router
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animasi**: Framer Motion
+- **UI Components**: shadcn/ui (komponen yang dapat diakses dan dapat dikustomisasi)
+- **Data**: PokeAPI (melalui [Pokenode-ts](https://github.com/Gabb-c/pokenode-ts)) - Library TypeScript dengan auto-caching
+- **Deployment**: Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔧 Konfigurasi UI Components
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Proyek ini menggunakan [shadcn/ui](https://ui.shadcn.com/) untuk komponen UI yang dapat diakses dan dapat dikustomisasi. Beberapa komponen yang digunakan termasuk:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Button**
+- **Card**
+- **Alert**
+- **Badge**
+- **Progress Bar**
+- **Dan lainnya**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Untuk informasi lebih lanjut tentang konfigurasi UI components, silakan kunjungi [shadcn/ui](https://ui.shadcn.com/).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Konfigurasi API
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Aplikasi ini menggunakan [Pokenode-ts](https://github.com/Gabb-c/pokenode-ts), sebuah wrapper TypeScript untuk PokeAPI yang menyediakan:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Type Safety**: Type definitions lengkap untuk semua data Pokemon
+- **Auto Caching**: Performa optimal dengan caching otomatis
+
+Meskipun menggunakan Pokenode-ts, data tetap diambil dari [pokeapi.co](https://pokeapi.co/api/v2) secara underlying.
+
+---
+
+## 📦 Instalasi & Menjalankan Secara Lokal
+
+1. **Clone repositori**
+
+2. **Install dependencies**
+
+   ```bash
+   bun install
+   ```
+
+3. **Jalankan server development**
+
+   ```bash
+   bun dev
+   ```
+
+4. **Buka di browser**
+   Akses [http://localhost:5173](http://localhost:5173) (atau port yang muncul di terminal).
+
+---
+
+## 🌐 Deployment
+
+Aplikasi ini telah di-deploy dan dapat diakses publik melalui:
+
+**🌍 [pokemens.ffathur.my.id](https://pokemens.ffathur.my.id)**
